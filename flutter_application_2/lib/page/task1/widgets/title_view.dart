@@ -10,8 +10,8 @@ class TitleView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      title: Text(title),
-      subtitle: Text(subtitle),
+      title: Text(title, style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16.0),),
+      subtitle: Text(subtitle, style: TextStyle(fontWeight: FontWeight.w200, fontSize: 14.0)),
       trailing: Wrap(
         spacing: 8,
         children: [

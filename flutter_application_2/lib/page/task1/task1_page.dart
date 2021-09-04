@@ -19,6 +19,7 @@ class Task1Page extends StatelessWidget {
                 child:
                   Column(
                     children: [
+                      SizedBox(height: 20.0),
                       TitleView(
                         title: "Machu Picchu",
                         subtitle: "Todo lo que necesitas saber para visitar la ciudad",
