@@ -40,13 +40,10 @@ class Home extends StatelessWidget {
       body: Column(
         children: [
           Padding(padding: const EdgeInsets.all(10.0),
-          // SizedBox(height: 8.0),
           child: Column(
             children: [
-              // _inputText(),
-              // SizedBox(height: 8.0),
               InputSearch(),
-              // Text('Hola mundo')
+              _categories(),
             ],
           )),
 
@@ -56,4 +53,22 @@ class Home extends StatelessWidget {
   }
 
 
+  Widget _categories()
+  {
+    return Column(
+      children: [
+        Padding(
+          padding: EdgeInsets.only(left: 30.0, right: 30.0, top: 25.0, bottom: 15.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text('Categories'),
+              Text('View All')
+            ]
+          ),
+        )
+      ],
+    );
+  }
 }
