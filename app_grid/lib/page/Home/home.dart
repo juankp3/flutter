@@ -1,7 +1,6 @@
 // import 'package:app_grid/theme.dart';
 import 'package:app_grid/theme.dart';
-import 'package:app_grid/widget/appbar_avatar.dart';
-import 'package:app_grid/widget/appbar_title.dart';
+import 'package:app_grid/widget/appbar_custom.dart';
 import 'package:app_grid/widget/text_search.dart';
 import 'package:flutter/material.dart';
 
@@ -11,21 +10,10 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        toolbarHeight: 72,
-        centerTitle: false,
-        backgroundColor: Colors.transparent,
-        elevation: 0.0,
-        title: Row(
-          children: [
-            SizedBox(width: 14.0),
-            AppBarTitle()
-          ],
-        ),
-        actions: [
-          AppBarAvatar(),
-          SizedBox(width: 24.0)
-        ],
+      appBar: AppBarCustom(
+          title: 'Hello Juan Kuga',
+          subTitle: 'Let\'s upgrade your skill',
+          iconImage: 'avatar.png',
       ),
       body: Column(
         children: [
@@ -41,7 +29,6 @@ class Home extends StatelessWidget {
       )
     );
   }
-
 
   Widget _categories()
   {
