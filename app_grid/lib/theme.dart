@@ -8,4 +8,29 @@ class AppTheme {
 
   static const  Color ColorPrimaryPurple = Color.fromRGBO(106, 69, 253, 1.0); // Morado
   static const  Color ColorPrimaryPurple3 = Color.fromRGBO(255, 199, 0, 1.0); // Amarillo
+
+  // Estilos
+  static const  TextStyle headLine1 = TextStyle(
+    color: Colors.black,
+    fontWeight:FontWeight.bold,
+    fontSize: 28.0
+  );
+
+  static const  TextStyle headLine2 = TextStyle(
+    color: Colors.black,
+    fontSize: 16.0
+  );
+
+  static const  TextStyle headLine3 = TextStyle(
+    color: Colors.black,
+    fontWeight:FontWeight.bold,
+    fontSize: 20.0
+  );
+
+  static const  TextStyle headLine4 = TextStyle(
+    color: Colors.black,
+    fontSize: 14.0
+  );
+
+
 }
