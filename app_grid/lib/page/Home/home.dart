@@ -1,6 +1,7 @@
 // import 'package:app_grid/theme.dart';
 import 'package:app_grid/theme.dart';
 import 'package:app_grid/widget/appbar_custom.dart';
+import 'package:app_grid/widget/card_category.dart';
 import 'package:app_grid/widget/text_search.dart';
 import 'package:flutter/material.dart';
 
@@ -15,18 +16,13 @@ class Home extends StatelessWidget {
           subTitle: 'Let\'s upgrade your skill',
           iconImage: 'avatar.png',
       ),
-      body: Column(
+      body: ListView(
         children: [
-          Padding(padding: const EdgeInsets.all(0.0),
-          child: Column(
-            children: [
-              TextSearch(),
-              _categories(),
-            ],
-          )),
-
-        ]
-      )
+          TextSearch(),
+          _categories(),
+          CardCategory()
+        ],
+      ),
     );
   }
 

@@ -3,11 +3,9 @@ import 'package:flutter/material.dart';
 
 class AppBarCustom extends StatelessWidget implements PreferredSizeWidget{
 
-// final Widget child;
 final String title;
 final String subTitle;
 final String iconImage;
-  // final String icon;
 
   AppBarCustom({
     required this.title,
@@ -18,8 +16,9 @@ final String iconImage;
   @override
   Widget build(BuildContext context) {
     return AppBar(
-        toolbarHeight: 72,
+        // toolbarHeight: 200,
         centerTitle: false,
+        // backgroundColor: Colors.red,
         backgroundColor: Colors.transparent,
         elevation: 0.0,
         title: Row(
@@ -47,7 +46,7 @@ final String iconImage;
           title,
           style: AppTheme.headLine1,
         ),
-        SizedBox(height: 8.0),
+        SizedBox(height: 4.0),
         Text(
           subTitle,
           style: AppTheme.headLine2,
