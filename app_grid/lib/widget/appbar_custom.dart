@@ -35,7 +35,7 @@ final String iconImage;
   }
 
   @override
-  Size get preferredSize => Size.fromHeight(60.0);
+  Size get preferredSize => Size.fromHeight(65.0);
 
 
   Widget _appBarTitle(title, subTitle){

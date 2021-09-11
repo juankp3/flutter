@@ -32,5 +32,16 @@ class AppTheme {
     fontSize: 14.0
   );
 
+  static const  TextStyle headLine5 = TextStyle(
+    fontWeight:FontWeight.bold,
+    color: Colors.black,
+    fontSize: 16.0
+  );
+
+  static const  TextStyle headLine6 = TextStyle(
+    color: Colors.grey,
+    fontSize: 14.0
+  );
+
 
 }

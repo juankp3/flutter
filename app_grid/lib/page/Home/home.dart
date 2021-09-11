@@ -1,7 +1,10 @@
 // import 'package:app_grid/theme.dart';
+import 'dart:ui';
+
 import 'package:app_grid/theme.dart';
 import 'package:app_grid/widget/appbar_custom.dart';
 import 'package:app_grid/widget/card_category.dart';
+import 'package:app_grid/widget/section_name.dart';
 import 'package:app_grid/widget/text_search.dart';
 import 'package:flutter/material.dart';
 
@@ -10,7 +13,24 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Scaffold(
+      bottomNavigationBar: Container(
+
+        margin: EdgeInsets.all(30),
+        height: 60,
+        decoration: BoxDecoration(
+          color: Colors.white,
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withOpacity(.15),
+              blurRadius: 30,
+              offset: Offset(0,10)
+              )],
+          borderRadius:BorderRadius.circular(50)
+        ),
+        child: Text('aaa'),
+      ),
       appBar: AppBarCustom(
           title: 'Hello Juan Kuga',
           subTitle: 'Let\'s upgrade your skill',
@@ -19,29 +39,26 @@ class Home extends StatelessWidget {
       body: ListView(
         children: [
           TextSearch(),
-          _categories(),
-          CardCategory()
+          SectionName(name: "Categoriessss"),
+          CardCategory(),
+          // _menu()
         ],
-      ),
+      )
+
+
+
     );
   }
 
-  Widget _categories()
+  Widget _menu()
   {
-    return Column(
-      children: [
-        Padding(
-          padding: EdgeInsets.only(left: 30.0, right: 30.0, top: 8.0, bottom: 15.0),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text('Categories', style: AppTheme.headLine3),
-              Text('View All', style: AppTheme.headLine4)
-            ]
-          ),
-        )
-      ],
+    return Positioned(
+      bottom: 0,
+      child: Container(
+        width: double.infinity,
+        height: 10,
+        color: Colors.yellow,
+      ),
     );
   }
 

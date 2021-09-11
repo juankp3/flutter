@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 
-class CardCategory extends StatelessWidget {
-  const CardCategory({ Key? key }) : super(key: key);
+class CardCourse extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 30.0, right: 30.0, top: 0, bottom: 20.0),
+      padding: const EdgeInsets.only(left: 30.0, right: 30.0, top: 20.0, bottom: 20.0),
       child: Container(
         child: Column(
           children: [
@@ -21,38 +20,28 @@ class CardCategory extends StatelessWidget {
 
 
 
-  Widget _getGridCard(itemHeight, itemWidth){
-    return GridView.count(
-      crossAxisCount: 2,
-      controller:  ScrollController(keepScrollOffset: false),
-      shrinkWrap: true,
-      childAspectRatio: (itemWidth / itemHeight),
-      mainAxisSpacing: 0.0,
-      crossAxisSpacing: 50.0,
-      scrollDirection: Axis.vertical,
-      children: List.generate(30, (index){
-        return _getCard();
-      }),
-    );
-  }
+  static const kListHeight = 150.0;
 
   Widget _getGridCard2(){
-    return GridView.builder(
-      physics: NeverScrollableScrollPhysics(),
-      shrinkWrap: true,
-      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 2,
-        crossAxisSpacing: 8.0,
-        mainAxisSpacing: 16.0,
-        mainAxisExtent: 220
+    return SizedBox(
+      width: double.infinity,
+      height: 250,
+      child: GridView.builder(
+        scrollDirection: Axis.horizontal,
+        gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+          maxCrossAxisExtent: 250,
+          childAspectRatio: 1,
+          crossAxisSpacing: 20,
+          mainAxisSpacing: 20
+        ),
+        itemCount: 10,
+        itemBuilder: (context, index) {
+          return Container(
+            color: Colors.blue,
+            child: _getCard(),
+          );
+        },
       ),
-      itemCount: 10,
-      itemBuilder: (context, index) {
-        return Container(
-          // color: Colors.blue,
-          child: _getCard(),
-        );
-      },
     );
   }
 
@@ -65,7 +54,8 @@ class CardCategory extends StatelessWidget {
         borderRadius: BorderRadius.circular(20.0),
       ),
       child: Container(
-        child: _cardTipo2(),
+        // child: _cardTipo2(),
+        child: Text('Hola'),
       ),
     );
   }
@@ -79,7 +69,7 @@ class CardCategory extends StatelessWidget {
           children: [
             Container(
               width: double.infinity,
-              height: 120.0,
+              height: 400.0,
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage("jkuga.jpg"),
