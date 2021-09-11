@@ -1,3 +1,4 @@
+import 'package:app_grid/theme.dart';
 import 'package:flutter/material.dart';
 
 class CardCategory extends StatelessWidget {
@@ -65,13 +66,13 @@ class CardCategory extends StatelessWidget {
         borderRadius: BorderRadius.circular(20.0),
       ),
       child: Container(
-        child: _cardTipo2(),
+        child: _card(),
       ),
     );
   }
 
 
-  Widget _cardTipo2() {
+  Widget _card() {
     return ClipRRect(
       borderRadius: BorderRadius.circular(15.0),
       child: Column(
@@ -95,7 +96,7 @@ class CardCategory extends StatelessWidget {
               ),
               child: Text(
                 "Coding",
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0),
+                style: AppTheme.headLine3,
               ),
             ),
             Padding(
@@ -107,10 +108,7 @@ class CardCategory extends StatelessWidget {
               child: Text(
                 "12 Courses",
                 overflow: TextOverflow.ellipsis,
-                style: TextStyle(
-                  fontSize: 16.0,
-                  color: Colors.black38,
-                ),
+                style: AppTheme.headLine2,
               ),
             ),
           ],

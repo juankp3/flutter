@@ -18,7 +18,6 @@ class ListCourse extends StatelessWidget {
   }
 
 
-
   Widget _listcourse() {
     return SizedBox(
       // height: 650,

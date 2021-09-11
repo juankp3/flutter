@@ -1,3 +1,4 @@
+import 'package:app_grid/theme.dart';
 import 'package:flutter/material.dart';
 
 class CardCourse extends StatelessWidget {
@@ -37,7 +38,6 @@ class CardCourse extends StatelessWidget {
         itemCount: 10,
         itemBuilder: (context, index) {
           return Container(
-            color: Colors.blue,
             child: _getCard(),
           );
         },
@@ -49,13 +49,55 @@ class CardCourse extends StatelessWidget {
   Widget _getCard(){
     return Card(
       elevation: 1.5,
-      // margin: EdgeInsets.all(0),
+      // margin: EdgeInsets.all(50),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(20.0),
       ),
-      child: Container(
-        // child: _cardTipo2(),
-        child: Text('Hola'),
+      child: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: Container(
+          // child: _cardTipo2(),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text('Android Developer', style: AppTheme.headLine8),
+              SizedBox(height: 12.0),
+              Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8),
+                  color: AppTheme.ColorPrimaryPurple,
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(4.0),
+                  child: Container(
+                    child: Text('\$50.00', style: AppTheme.headLine7),
+                  ),
+                ),
+              ),
+              SizedBox(height: 30),
+              Container(
+                width: 150,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(16),
+                  border: Border.all(color: AppTheme.ColorPrimaryPurple)
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
+                    child: Row(
+                      children: [
+                        Icon(Icons.timer),
+                        SizedBox(width: 4.0),
+                        Text('8 hours, 20min')
+                      ],
+                    ),
+                  ),
+                ),
+              )
+            ],
+          ),
+        ),
       ),
     );
   }

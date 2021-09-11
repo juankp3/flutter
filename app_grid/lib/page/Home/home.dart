@@ -16,7 +16,6 @@ class Home extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       bottomNavigationBar: Container(
-
         margin: EdgeInsets.all(30),
         height: 60,
         decoration: BoxDecoration(
@@ -39,7 +38,7 @@ class Home extends StatelessWidget {
       body: ListView(
         children: [
           TextSearch(),
-          SectionName(name: "Categoriessss"),
+          SectionName(name: "Categories"),
           CardCategory(),
           // _menu()
         ],
