@@ -2,7 +2,6 @@ import 'package:app_grid/theme.dart';
 import 'package:flutter/material.dart';
 
 class CardCategory extends StatelessWidget {
-  const CardCategory({ Key? key }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
