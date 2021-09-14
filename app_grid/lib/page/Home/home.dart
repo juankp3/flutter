@@ -76,13 +76,38 @@ class Home extends StatelessWidget {
           color: Colors.white,
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withOpacity(.15),
+              color: Colors.black.withOpacity(.25),
               blurRadius: 30,
-              offset: Offset(0,10)
+              offset: Offset(0,0)
               )],
           borderRadius:BorderRadius.circular(50)
         ),
-        child: Text('MENUUUU'),
+        child: Padding(
+          padding: const EdgeInsets.only(left: 30, right: 30),
+          child: Container(
+            child:
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                _iconmenu(Icon(Icons.home, size: 28, color: AppTheme.ColorPrimaryPurple)),
+                _iconmenu(Icon(Icons.email, size: 28, color: AppTheme.ColorGray300)),
+                _iconmenu(Icon(Icons.folder, size: 28, color: AppTheme.ColorGray300)),
+                _iconmenu(Icon(Icons.settings, size: 28, color: AppTheme.ColorGray300)),
+              ],
+            ),
+          ),
+        ),
+    );
+  }
+
+  Widget _iconmenu(icon)
+  {
+    return Container(
+      // width: 100,
+      height: 60,
+      // color: Colors.red,
+      child: icon,
     );
   }
 
