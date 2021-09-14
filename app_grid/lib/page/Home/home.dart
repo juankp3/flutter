@@ -15,9 +15,63 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      bottomNavigationBar: Container(
+      // bottomNavigationBar: _menu(),
+      appBar: AppBarCustom(
+          title: 'Hello Juan Kuga',
+          subTitle: 'Let\'s upgrade your skill',
+          iconImage: 'assets/avatar.png',
+      ),
+      // body: ListView(
+      //   children: [
+      //     TextSearch(),
+      //     SectionName(name: "Categories"),
+      //     CardCategory(),
+      //     _menu()
+      //   ],
+      // )
+      body: Stack(
+        children: [
+          _cargarLista(),
+          _menu2()
+        ],
+      ),
+
+
+
+    );
+  }
+
+  Widget _cargarLista(){
+    return ListView(
+        children: [
+          TextSearch(),
+          SectionName(name: "Categories"),
+          CardCategory(),
+        ],
+      );
+  }
+
+  Widget _menu2()
+  {
+    return Align(
+      alignment: Alignment.bottomCenter,
+      child: _menu()
+    );
+    // return Positioned(
+    //   top: 600,
+    //   left: 0,
+    //   right: 0,
+    //   child: _menu()
+    // );
+  }
+
+  Widget _menu()
+  {
+    return Container(
+        alignment: Alignment.bottomCenter,
         margin: EdgeInsets.all(30),
         height: 60,
+        width: double.infinity,
         decoration: BoxDecoration(
           color: Colors.white,
           boxShadow: [
@@ -28,36 +82,7 @@ class Home extends StatelessWidget {
               )],
           borderRadius:BorderRadius.circular(50)
         ),
-        child: Text('aaa'),
-      ),
-      appBar: AppBarCustom(
-          title: 'Hello Juan Kuga',
-          subTitle: 'Let\'s upgrade your skill',
-          iconImage: 'avatar.png',
-      ),
-      body: ListView(
-        children: [
-          TextSearch(),
-          SectionName(name: "Categories"),
-          CardCategory(),
-          // _menu()
-        ],
-      )
-
-
-
-    );
-  }
-
-  Widget _menu()
-  {
-    return Positioned(
-      bottom: 0,
-      child: Container(
-        width: double.infinity,
-        height: 10,
-        color: Colors.yellow,
-      ),
+        child: Text('MENUUUU'),
     );
   }
 

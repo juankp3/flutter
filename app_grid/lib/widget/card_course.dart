@@ -114,7 +114,7 @@ class CardCourse extends StatelessWidget {
               height: 400.0,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage("jkuga.jpg"),
+                  image: AssetImage("assets/jkuga.jpg"),
                   fit: BoxFit.cover,
                 ),
               ),

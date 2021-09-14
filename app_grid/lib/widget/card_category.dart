@@ -83,7 +83,7 @@ class CardCategory extends StatelessWidget {
               height: 120.0,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage("jkuga.jpg"),
+                  image: AssetImage("assets/jkuga.jpg"),
                   fit: BoxFit.cover,
                 ),
               ),

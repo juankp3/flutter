@@ -12,7 +12,7 @@ class Course extends StatelessWidget {
       appBar: AppBarCustom(
           title: 'Select Courses',
           subTitle: '12 Courses ready to be learned',
-          iconImage: 'settings.png',
+          iconImage: 'assets/settings.png',
       ),
       body: ListView(
         children: [
