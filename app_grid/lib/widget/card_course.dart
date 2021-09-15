@@ -5,60 +5,52 @@ class CardCourse extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(left: 0, right: 0, top: 20.0, bottom: 20.0),
-      child: Container(
-        child: Column(
-          children: [
-            _getGridCard2()
-          ],
-        ),
-      ),
+    return Container(
+      width: double.infinity,
+      height: 250,
+      margin: EdgeInsets.symmetric(vertical: 30.0),
+      // color: Colors.red,
+      child: _getGridCard()
     );
   }
 
 
-
-  static const kListHeight = 150.0;
-
-  Widget _getGridCard2(){
-    return SizedBox(
-      width: double.infinity,
-      height: 250,
-      child: GridView.builder(
-        scrollDirection: Axis.horizontal,
-        gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-          maxCrossAxisExtent: 250,
-          childAspectRatio: 1,
-          crossAxisSpacing: 20,
-          mainAxisSpacing: 20
-        ),
-        itemCount: 10,
-        itemBuilder: (context, index) {
-          return Container(
-            child: _getCard(),
-          );
-        },
-      ),
+  Widget _getGridCard(){
+    return GridView.builder(
+          scrollDirection: Axis.horizontal,
+          gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+            maxCrossAxisExtent: 250,
+            childAspectRatio: 1,
+            // crossAxisSpacing: 20,
+            // mainAxisSpacing: 20
+          ),
+          itemCount: 10,
+          itemBuilder: (context, index) {
+            return _getCard();
+          },
     );
   }
 
 
   Widget _getCard(){
-    return Card(
-      elevation: 1.5,
-      // margin: EdgeInsets.all(50),
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(20.0),
-      ),
-      child: Padding(
-        padding: const EdgeInsets.all(20.0),
-        child: Container(
-          child: Stack(
-            children: [
-              _contentCard(),
-              _horario()
-            ]
+    return Padding(
+      padding: const EdgeInsets.only(top: 8.0, bottom: 8),
+      child: Card(
+        elevation: 1.5,
+        // color: Colors.amber,
+        margin: EdgeInsets.only(left: 30),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(20.0),
+        ),
+        child: Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Container(
+            child: Stack(
+              children: [
+                _contentCard(),
+                _horario()
+              ]
+            ),
           ),
         ),
       ),

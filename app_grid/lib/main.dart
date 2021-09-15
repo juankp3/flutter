@@ -14,8 +14,8 @@ class AppGrid extends StatelessWidget {
       theme: ThemeData(
         scaffoldBackgroundColor: AppTheme.ColorGrayBackground
       ),
-      home: Home()
-      // home: Course()
+      // home: Home()
+      home: Course()
     );
 
   }

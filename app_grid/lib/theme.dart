@@ -7,7 +7,7 @@ class AppTheme {
 
 
   static const  Color ColorPrimaryPurple = Color.fromRGBO(106, 69, 253, 1.0); // Morado
-  static const  Color ColorPrimaryPurple3 = Color.fromRGBO(255, 199, 0, 1.0); // Amarillo
+  static const  Color ColorYellow = Color.fromRGBO(255, 199, 0, 1.0); // Amarillo
 
   // Estilos
   static const  TextStyle headLine1 = TextStyle(
