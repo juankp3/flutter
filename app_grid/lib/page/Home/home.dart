@@ -1,18 +1,16 @@
 import 'package:app_grid/theme.dart';
 import 'package:app_grid/widget/appbar_custom.dart';
-import 'package:app_grid/widget/card_category.dart';
+import 'package:app_grid/page/Home/widget/card_category.dart';
+import 'package:app_grid/page/Home/widget/text_search.dart';
 import 'package:app_grid/widget/content_menu.dart';
 import 'package:app_grid/widget/section_name.dart';
-import 'package:app_grid/widget/text_search.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatelessWidget {
-  const Home({ Key? key }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // bottomNavigationBar: _menu(),
       appBar: AppBarCustom(
           title: 'Hello Juan Kuga',
           subTitle: 'Let\'s upgrade your skill',
@@ -20,14 +18,14 @@ class Home extends StatelessWidget {
       ),
       body: Stack(
         children: [
-          _cargarLista(),
+          _body(),
           ContentMenu(menu: _menu())
         ],
       ),
     );
   }
 
-  Widget _cargarLista(){
+  Widget _body(){
     return ListView(
         children: [
           TextSearch(),
@@ -36,7 +34,6 @@ class Home extends StatelessWidget {
         ],
       );
   }
-
 
   Widget _menu(){
     return Padding(
@@ -60,10 +57,8 @@ class Home extends StatelessWidget {
   Widget _iconmenu(icon)
   {
     return Container(
-      // margin: EdgeInsets.only(left: 8.0, right: 8.0),
       width: 40,
       height: 60,
-      // color: Colors.red,
       child: icon,
     );
   }

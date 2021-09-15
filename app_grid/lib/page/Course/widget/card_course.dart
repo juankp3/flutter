@@ -48,7 +48,7 @@ class CardCourse extends StatelessWidget {
             child: Stack(
               children: [
                 _contentCard(),
-                _horario()
+                _schedule()
               ]
             ),
           ),
@@ -81,7 +81,7 @@ class CardCourse extends StatelessWidget {
     );
   }
 
-  Widget _horario(){
+  Widget _schedule(){
     return Align(
       alignment: Alignment.bottomLeft,
       child: Container(

@@ -1,8 +1,8 @@
 import 'package:app_grid/theme.dart';
 import 'package:app_grid/widget/appbar_custom.dart';
-import 'package:app_grid/widget/card_course.dart';
+import 'package:app_grid/page/Course/widget/card_course.dart';
 import 'package:app_grid/widget/content_menu.dart';
-import 'package:app_grid/widget/list_course.dart';
+import 'package:app_grid/page/Course/widget/list_course.dart';
 import 'package:app_grid/widget/section_name.dart';
 import 'package:flutter/material.dart';
 class Course extends StatelessWidget {
@@ -28,7 +28,6 @@ class Course extends StatelessWidget {
       ],)
     );
   }
-
 
   Widget _menu(){
     return Padding(
