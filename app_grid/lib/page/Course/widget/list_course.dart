@@ -44,7 +44,7 @@ class ListCourse extends StatelessWidget {
           Container(
             child: Row(
               children: [
-                Image.asset('jkuga.jpg'),
+                Image.asset('assets/jkuga.jpg'),
                 SizedBox(width: 16.0,),
                 Column(
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -58,7 +58,7 @@ class ListCourse extends StatelessWidget {
               ],
             ),
           ),
-          Image.asset('play.png'),
+          Image.asset('assets/play.png'),
         ],
       ),
     );
