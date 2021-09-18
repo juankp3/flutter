@@ -1,3 +1,4 @@
+import 'package:app_grid/models/list_course.dart';
 import 'package:app_grid/theme.dart';
 import 'package:flutter/material.dart';
 
@@ -10,29 +11,28 @@ class CardCourse extends StatelessWidget {
       height: _height,
       margin: EdgeInsets.symmetric(vertical: 30.0),
       // color: Colors.red,
-      child: _getGridCard()
+      child: ListView.builder(
+        scrollDirection: Axis.horizontal,
+        itemCount: courses.length,
+        itemBuilder: (context, index) => CourseItem(
+          course: courses[index],
+        ),
+      )
     );
   }
 
-
-  Widget _getGridCard(){
-    return GridView.builder(
-          scrollDirection: Axis.horizontal,
-          gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-            maxCrossAxisExtent: _height,
-            childAspectRatio: 1,
-            // crossAxisSpacing: 20,
-            // mainAxisSpacing: 20
-          ),
-          itemCount: 10,
-          itemBuilder: (context, index) {
-            return _getCard();
-          },
-    );
-  }
+}
 
 
-  Widget _getCard(){
+class CourseItem extends StatelessWidget {
+  CourseItem({
+    required this.course,
+  });
+
+  final ListCourseModel course;
+
+  @override
+  Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(top: 8.0, bottom: 8),
       child: Card(
@@ -66,6 +66,11 @@ class CardCourse extends StatelessWidget {
       ),
     );
   }
+
+
+  //   Widget _getCard(){
+  //   return ;
+  // }
 
   Widget _contentCard(){
     return   Column(
@@ -115,6 +120,7 @@ class CardCourse extends StatelessWidget {
       )
     );
   }
+
 
 }
 
