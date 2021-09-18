@@ -45,7 +45,7 @@ class Course extends StatelessWidget {
                 borderRadius: BorderRadius.circular(25),
                 color: AppTheme.ColorYellow
               ),
-              child: Icon(Icons.file_present),
+              child: Icon(Icons.note_add, color: Colors.white),
             ),
             SizedBox(width: 12.0),
             Expanded(
@@ -57,7 +57,7 @@ class Course extends StatelessWidget {
                   borderRadius: BorderRadius.circular(25),
                   color: AppTheme.ColorPrimaryPurple,
                 ),
-                child: Text('Get the Course'),
+                child: Text('Get the Course', style: AppTheme.headLine7),
               ),
             )
           ],

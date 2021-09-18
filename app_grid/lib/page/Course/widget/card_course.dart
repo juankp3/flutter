@@ -2,12 +2,12 @@ import 'package:app_grid/theme.dart';
 import 'package:flutter/material.dart';
 
 class CardCourse extends StatelessWidget {
-
+  final double _height= 265;
   @override
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      height: 250,
+      height: _height,
       margin: EdgeInsets.symmetric(vertical: 30.0),
       // color: Colors.red,
       child: _getGridCard()
@@ -19,7 +19,7 @@ class CardCourse extends StatelessWidget {
     return GridView.builder(
           scrollDirection: Axis.horizontal,
           gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-            maxCrossAxisExtent: 250,
+            maxCrossAxisExtent: _height,
             childAspectRatio: 1,
             // crossAxisSpacing: 20,
             // mainAxisSpacing: 20
@@ -42,14 +42,24 @@ class CardCourse extends StatelessWidget {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20.0),
         ),
-        child: Padding(
-          padding: const EdgeInsets.all(20.0),
-          child: Container(
-            child: Stack(
-              children: [
-                _contentCard(),
-                _schedule()
-              ]
+        child: Container(
+          width: double.infinity,
+          height: 100.0,
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage("assets/android.png"),
+              alignment: Alignment.topRight
+            )
+          ),
+          child: Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: Container(
+              child: Stack(
+                children: [
+                  _contentCard(),
+                  _schedule()
+                ]
+              ),
             ),
           ),
         ),
@@ -95,9 +105,9 @@ class CardCourse extends StatelessWidget {
           child: Container(
             child: Row(
               children: [
-                Icon(Icons.timer),
+                Icon(Icons.timer, color: AppTheme.ColorPrimaryPurple),
                 SizedBox(width: 4.0),
-                Text('8 hours, 20min')
+                Text('8 hours, 20min', style: TextStyle(color: AppTheme.ColorPrimaryPurple))
               ],
             ),
           ),
