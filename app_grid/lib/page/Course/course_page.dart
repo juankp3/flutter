@@ -5,8 +5,7 @@ import 'package:app_grid/widget/content_menu.dart';
 import 'package:app_grid/page/Course/widget/list_course.dart';
 import 'package:app_grid/widget/section_name.dart';
 import 'package:flutter/material.dart';
-class Course extends StatelessWidget {
-  const Course({ Key? key }) : super(key: key);
+class CoursePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {

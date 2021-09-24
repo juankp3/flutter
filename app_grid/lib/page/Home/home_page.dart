@@ -6,7 +6,7 @@ import 'package:app_grid/widget/content_menu.dart';
 import 'package:app_grid/widget/section_name.dart';
 import 'package:flutter/material.dart';
 
-class Home extends StatelessWidget {
+class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {

@@ -29,4 +29,20 @@ List<ListCourseModel> courses = [
     schedule: "9 hours, 48min",
     background: "assets/android.png",
   ),
+
+  ListCourseModel(
+    id: 3,
+    name: "Mobile Apps With Swift",
+    price: "\$50",
+    schedule: "9 hours, 48min",
+    background: "assets/android.png",
+  ),
+
+  ListCourseModel(
+    id: 4,
+    name: "Mobile Apps With Swift",
+    price: "\$50",
+    schedule: "9 hours, 48min",
+    background: "assets/android.png",
+  ),
 ];

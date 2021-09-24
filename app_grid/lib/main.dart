@@ -1,5 +1,5 @@
-import 'package:app_grid/page/Course/Course.dart';
-import 'package:app_grid/page/Home/home.dart';
+import 'package:app_grid/page/Course/course_page.dart';
+import 'package:app_grid/page/Home/home_page.dart';
 import 'package:app_grid/theme.dart';
 import 'package:flutter/material.dart';
 void main() => runApp(AppGrid());
@@ -14,8 +14,8 @@ class AppGrid extends StatelessWidget {
       theme: ThemeData(
         scaffoldBackgroundColor: AppTheme.ColorGrayBackground
       ),
-      // home: Home()
-      home: Course()
+      home: HomePage()
+      // home: Course()
     );
 
   }

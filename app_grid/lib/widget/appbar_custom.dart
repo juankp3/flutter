@@ -1,5 +1,6 @@
 import 'package:app_grid/theme.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class AppBarCustom extends StatelessWidget implements PreferredSizeWidget{
 
@@ -16,9 +17,7 @@ final String iconImage;
   @override
   Widget build(BuildContext context) {
     return AppBar(
-        // toolbarHeight: 200,
         centerTitle: false,
-        // backgroundColor: Colors.red,
         backgroundColor: Colors.transparent,
         elevation: 0.0,
         title: Row(
@@ -26,6 +25,10 @@ final String iconImage;
             SizedBox(width: 14.0),
             _appBarTitle(title, subTitle)
           ],
+        ),
+        systemOverlayStyle: SystemUiOverlayStyle(
+          systemNavigationBarColor: Colors.amber,
+          statusBarColor: Colors.pink
         ),
         actions: [
           _appBarButton(iconImage),

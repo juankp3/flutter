@@ -14,6 +14,7 @@ class CardCourse extends StatelessWidget {
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         itemCount: courses.length,
+
         itemBuilder: (context, index) => CourseItem(
           course: courses[index],
         ),
@@ -43,8 +44,8 @@ class CourseItem extends StatelessWidget {
           borderRadius: BorderRadius.circular(20.0),
         ),
         child: Container(
-          width: double.infinity,
-          height: 100.0,
+          // width: double.infinity,
+          // height: 200.0,
           decoration: BoxDecoration(
             image: DecorationImage(
               image: AssetImage("assets/android.png"),

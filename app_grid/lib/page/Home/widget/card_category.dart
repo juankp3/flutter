@@ -1,3 +1,4 @@
+import 'package:app_grid/page/Course/course_page.dart';
 import 'package:app_grid/theme.dart';
 import 'package:flutter/material.dart';
 
@@ -10,33 +11,14 @@ class CardCategory extends StatelessWidget {
       child: Container(
         child: Column(
           children: [
-            // _getCard(),
-            // _getGridCard(itemHeight, itemWidth)
-            _getGridCard2()
+            _getGridCard()
           ],
         ),
       ),
     );
   }
 
-
-
-  Widget _getGridCard(itemHeight, itemWidth){
-    return GridView.count(
-      crossAxisCount: 2,
-      controller:  ScrollController(keepScrollOffset: false),
-      shrinkWrap: true,
-      childAspectRatio: (itemWidth / itemHeight),
-      mainAxisSpacing: 0.0,
-      crossAxisSpacing: 50.0,
-      scrollDirection: Axis.vertical,
-      children: List.generate(30, (index){
-        return _getCard();
-      }),
-    );
-  }
-
-  Widget _getGridCard2(){
+  Widget _getGridCard(){
     return GridView.builder(
       physics: NeverScrollableScrollPhysics(),
       shrinkWrap: true,
@@ -50,26 +32,35 @@ class CardCategory extends StatelessWidget {
       itemBuilder: (context, index) {
         return Container(
           // color: Colors.blue,
-          child: _getCard(),
+          child: _getCard(context),
         );
       },
     );
   }
 
 
-  Widget _getCard(){
-    return Card(
-      elevation: 1.5,
-      // margin: EdgeInsets.all(0),
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(20.0),
+  Widget _getCard(context){
+    return GestureDetector(
+      child: Card(
+        elevation: 1.5,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(20.0),
+        ),
+        child: Container(
+          child: _card(),
+        ),
       ),
-      child: Container(
-        child: _card(),
-      ),
+      onTap: (){
+        print("Holaa esto es una prueba");
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => CoursePage(),
+            )
+        );
+      },
     );
   }
-
 
   Widget _card() {
     return ClipRRect(
@@ -111,7 +102,7 @@ class CardCategory extends StatelessWidget {
               ),
             ),
           ],
-        ),
+        )
       );
   }
 
